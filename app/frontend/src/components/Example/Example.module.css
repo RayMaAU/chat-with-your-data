@@ -11,19 +11,46 @@
 
 .example {
     word-break: break-word;
-    background: #dbdbdb;
-    border-radius: 0.5rem;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
     margin-bottom: 0.3125rem;
     cursor: pointer;
+    transition: all 0.3s ease;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+/* Colorful gradients for different example cards */
+.examplesNavList li:nth-of-type(1) .example {
+    background: linear-gradient(135deg, #8b9dc3 0%, #a695b8 100%);
+}
+
+.examplesNavList li:nth-of-type(2) .example {
+    background: linear-gradient(135deg, #d4a8d4 0%, #c48a8a 100%);
+}
+
+.examplesNavList li:nth-of-type(3) .example {
+    background: linear-gradient(135deg, #7db8d4 0%, #6bb8c7 100%);
 }
 
 .example:hover {
-    box-shadow:
-        0rem 0.5rem 1rem rgba(0, 0, 0, 0.14),
-        0rem 0rem 0.125rem rgba(0, 0, 0, 0.12);
-    outline: 0.125rem solid rgba(115, 118, 225, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced hover gradients */
+.examplesNavList li:nth-of-type(1) .example:hover {
+    background: linear-gradient(135deg, #9aa8cc 0%, #b5a5c2 100%);
+}
+
+.examplesNavList li:nth-of-type(2) .example:hover {
+    background: linear-gradient(135deg, #ddb5dd 0%, #d09999 100%);
+}
+
+.examplesNavList li:nth-of-type(3) .example:hover {
+    background: linear-gradient(135deg, #8cc4dd 0%, #7bc4d1 100%);
 }
 
 .exampleText {
@@ -32,6 +59,9 @@
     width: 25rem;
     padding: 0.5rem;
     min-height: 4.5rem;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 500;
 }
 
 .examplesNavList li {
@@ -64,5 +94,8 @@
         width: 17.5rem;
         padding: 0;
         min-height: 6.25rem;
+        color: #ffffff;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        font-weight: 500;
     }
 }

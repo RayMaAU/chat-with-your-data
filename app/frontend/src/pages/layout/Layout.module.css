@@ -11,8 +11,43 @@
 }
 
 .header {
-    background-color: #222222;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.08) 100%);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     color: #f2f2f2;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        rgba(64, 224, 208, 0.1) 0%,
+        rgba(138, 43, 226, 0.08) 25%,
+        rgba(30, 144, 255, 0.06) 50%,
+        rgba(255, 20, 147, 0.08) 75%,
+        rgba(255, 165, 0, 0.1) 100%
+    );
+    background-size: 400% 400%;
+    animation: liquidFlow 8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes liquidFlow {
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
 }
 
 .headerContainer {
@@ -22,12 +57,15 @@
     padding-left: 1rem;
     padding-right: 1rem;
     position: relative;
+    z-index: 10;
+    -webkit-backdrop-filter: inherit;
+    backdrop-filter: inherit;
 }
 
 .headerTitleContainer {
     display: flex;
     align-items: center;
-    color: #f2f2f2;
+    color: #333333;
     text-decoration: none;
 }
 
@@ -39,6 +77,11 @@
 .headerTitle {
     margin-left: 0.5rem;
     font-weight: 600;
+    background: linear-gradient(135deg, #333333 0%, #555555 50%, #333333 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
 }
 
 .headerNavList {
@@ -90,18 +133,29 @@
 
 .menuToggle {
     display: block;
-    background: none;
-    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
     color: #f2f2f2;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     cursor: pointer;
     z-index: 101;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.menuToggle:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .loginMenuContainer {
     display: flex;
     align-items: center;
-    gap: 0; /* Ensure no gap between login button and menu toggle */
+    gap: 0.8rem;
 }
 
 @media (min-width: 992px) {

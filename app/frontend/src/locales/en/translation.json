@@ -1,6 +1,6 @@
 {
-    "pageTitle": "Azure OpenAI + AI Search",
-    "headerTitle": "Azure OpenAI + AI Search",
+    "pageTitle": "AI for Law Firms Summit",
+    "headerTitle": "AI for Law Firms Summit",
     "chat": "Chat",
     "qa": "Ask a question",
     "login": "Login",
@@ -32,7 +32,7 @@
         "errorDeleting": "Error deleting.",
         "fileDeleted": "File deleted"
     },
-    "developerSettings": "Developer settings",
+    "developerSettings": "Advanced settings",
 
     "chatEmptyStateTitle": "Chat with your data",
     "chatEmptyStateSubtitle": "Ask anything or try an example",
