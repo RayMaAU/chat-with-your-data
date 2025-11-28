@@ -37,17 +37,17 @@
     "chatEmptyStateTitle": "Discutez avec vos données",
     "chatEmptyStateSubtitle": "Demandez n'importe quoi ou essayez un exemple",
     "defaultExamples": {
-        "1": "Qu'est-ce qui est inclus dans mon plan Northwind Health Plus qui n'est pas dans le standard?",
-        "2": "Qu'arrive-t-il lors d'un examen de performance?",
-        "3": "Qu'est-ce qu'un Product Manager fait?",
-        "placeholder": "Tapez une nouvelle question (par exemple, mon plan couvre-t-il les examens oculaires annuels?)"
+        "1": "What are the five drivers of AI value?",
+        "2": "Show me some Copilot use cases.",
+        "3": "What the summit agenda?",
+        "placeholder": "What's the Journey to the Frontier Firm?"
     },
     "askTitle": "Demandez à vos données",
     "multimodalExamples": {
         "1": "Comparez l'impact des taux d'intérêt et du PIB sur les marchés financiers.",
         "2": "Quelle est la tendance prévue pour l'indice S&P 500 au cours des cinq prochaines années? Comparez-le aux performances passées de l'S&P 500",
         "3": "Pouvez-vous identifier une corrélation entre les prix du pétrole et les tendances du marché boursier?",
-        "placeholder": "Exemple: Mon plan couvre-t-il les examens oculaires annuels?"
+        "placeholder": "What's the Journey to the Frontier Firm?"
     },
     "generatingAnswer": "Génération de la réponse",
     "citationWithColon": "Citation:",

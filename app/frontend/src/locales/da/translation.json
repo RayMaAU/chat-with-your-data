@@ -36,17 +36,17 @@
     "chatEmptyStateTitle": "Chat med dine data",
     "chatEmptyStateSubtitle": "Spørg om hvad som helst eller prøv et eksempel",
     "defaultExamples": {
-        "1": "Hvad er inkluderet i min Northwind Health Plus plan, som ikke er i standardplanen?",
-        "2": "Hvordan foregår en medarbejderevaluering?",
-        "3": "Hvad laver en produktchef?",
-        "placeholder": "Skriv et nyt spørgsmål (f.eks. dækker min plan årlige øjenundersøgelser?)"
+        "1": "What are the five drivers of AI value?",,
+        "2": "Show me some Copilot use cases.",,
+        "3": "What the summit agenda?",,
+        "placeholder": "What's the Journey to the Frontier Firm?"
     },
     "askTitle": "Spørg til dine data",
     "multimodalExamples": {
         "1": "Sammenlign effekten af renter og BNP på finansmarkederne.",
         "2": "Hvad er den forventede tendens for S&P 500 indekset over de næste fem år? Sammenlign det med tidligere S&P 500 præstation.",
         "3": "Kan du identificere nogen korrelation mellem oliepriser og aktiemarkedets tendenser?",
-        "placeholder": "Eksempel: Dækker min plan årlige øjenundersøgelser?"
+        "placeholder": "What's the Journey to the Frontier Firm?"
     },
     "generatingAnswer": "Genererer svar",
     "citationWithColon": "Kilder:",

@@ -9,7 +9,7 @@ sample:
     user_query: Does it include hearing?
     past_messages:
         - role: user
-          content: "What is included in my Northwind Health Plus plan that is not in standard?"
+          content: "What are the five drivers of AI value?"
         - role: assistant
           content: "The Northwind Health Plus plan includes coverage for emergency services, mental health and substance abuse coverage, and out-of-network services, which are not included in the Northwind Standard plan. [Benefit_Options.pdf#page=3]"
 ---

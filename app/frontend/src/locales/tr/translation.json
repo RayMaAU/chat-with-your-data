@@ -37,17 +37,17 @@
     "chatEmptyStateTitle": "Verilerinizle sohbet edin",
     "chatEmptyStateSubtitle": "Bir soru sorun veya bir örnek deneyin",
     "defaultExamples": {
-        "1": "Northwind Health Plus planımda standart planda olmayan neler var?",
-        "2": "Performans değerlendirmesinde ne olur?",
-        "3": "Bir Ürün Yöneticisi ne yapar?",
-        "placeholder": "Yeni bir soru yazın (ör. planım yıllık göz muayenelerini kapsıyor mu?)"
+        "1": "What are the five drivers of AI value?",
+        "2": "Show me some Copilot use cases.",
+        "3": "What the summit agenda?",
+        "placeholder": "What's the Journey to the Frontier Firm?"
     },
     "askTitle": "Verilerinize sorun",
     "multimodalExamples": {
         "1": "Faiz oranları ve GSYİH'nin finansal piyasalar üzerindeki etkisini karşılaştırın.",
         "2": "Önümüzdeki beş yıl için S&P 500 endeksinin beklenen trendi nedir? Geçmiş S&P 500 performansı ile karşılaştırın",
         "3": "Petrol fiyatları ile borsa trendleri arasında herhangi bir korelasyon bulabilir misiniz?",
-        "placeholder": "Örnek: Planım yıllık göz muayenelerini kapsıyor mu?"
+        "placeholder": "What's the Journey to the Frontier Firm?"
     },
     "generatingAnswer": "Cevap oluşturuluyor",
     "citationWithColon": "Alıntı:",
