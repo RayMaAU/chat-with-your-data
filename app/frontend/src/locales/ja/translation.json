@@ -34,7 +34,7 @@
     },
     "developerSettings": "高度な設定",
 
-    "chatEmptyStateTitle": "データを用いてチャットを行います",
+    "chatEmptyStateTitle": "Chat with the Law Firms Summit Agent",
     "chatEmptyStateSubtitle": "ご自由にお問い合わせいただくか、もしくは下記のサンプルをお試しください",
     "defaultExamples": {
         "1": "What are the five drivers of AI value?",
