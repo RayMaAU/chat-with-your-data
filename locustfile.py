@@ -17,7 +17,7 @@ class ChatUser(HttpUser):
         first_question = random.choice(
             [
                 "What are the five drivers of AI value?",
-                "What the summit agenda?",
+                "What's the summit agenda?",
                 "Show me some Copilot use cases.",
                 "Whats your whistleblower policy?",
             ]

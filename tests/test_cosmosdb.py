@@ -35,7 +35,7 @@ for_deletion_query = [
             "session_id": "123",
             "entra_oid": "OID_X",
             "type": "message_pair",
-            "question": "What the summit agenda?",
+            "question": "What's the summit agenda?",
             "response": {
                 "delta": {"role": "assistant"},
                 "session_state": "143c0240-b2ee-4090-8e90-2a1c58124894",
@@ -58,7 +58,7 @@ for_message_pairs_query = [
             "session_id": "123",
             "entra_oid": "OID_X",
             "type": "message_pair",
-            "question": "What the summit agenda?",
+            "question": "What's the summit agenda?",
             "response": {
                 "delta": {"role": "assistant"},
                 "session_state": "143c0240-b2ee-4090-8e90-2a1c58124894",
