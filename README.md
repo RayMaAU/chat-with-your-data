@@ -23,38 +23,6 @@ This solution creates a ChatGPT-like frontend experience over your own documents
 
 This solution's backend is written in Python. There are also [**JavaScript**](https://aka.ms/azai/js/code), [**.NET**](https://aka.ms/azai/net/code), and [**Java**](https://aka.ms/azai/java/code) samples based on this one. Learn more about [developing AI apps using Azure AI Services](https://aka.ms/azai).
 
-[![Open in GitHub Codespaces](https://img.shields.io/static/v1?style=for-the-badge&label=GitHub+Codespaces&message=Open&color=brightgreen&logo=github)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=599293758&machine=standardLinux32gb&devcontainer_path=.devcontainer%2Fdevcontainer.json&location=WestUs2)
-[![Open in Dev Containers](https://img.shields.io/static/v1?style=for-the-badge&label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/azure-samples/azure-search-openai-demo)
-
-## Important Security Notice
-
-This template, the application code and configuration it contains, has been built to showcase Microsoft Azure specific services and tools. We strongly advise our customers not to make this code part of their production environments without implementing or enabling additional security features. See our [productionizing guide](docs/productionizing.md) for tips, and consult the [Azure OpenAI Landing Zone reference architecture](https://techcommunity.microsoft.com/blog/azurearchitectureblog/azure-openai-landing-zone-reference-architecture/3882102) for more best practices.
-
-## Table of Contents
-
-- [Features](#features)
-- [Azure account requirements](#azure-account-requirements)
-  - [Cost estimation](#cost-estimation)
-- [Getting Started](#getting-started)
-  - [GitHub Codespaces](#github-codespaces)
-  - [VS Code Dev Containers](#vs-code-dev-containers)
-  - [Local environment](#local-environment)
-- [Deploying](#deploying)
-  - [Deploying again](#deploying-again)
-- [Running the development server](#running-the-development-server)
-- [Using the app](#using-the-app)
-- [Clean up](#clean-up)
-- [Guidance](#guidance)
-  - [Resources](#resources)
-
-![Chat screen](docs/images/chatscreen.png)
-
-[📺 Watch a video overview of the app.](https://youtu.be/3acB0OWmLvM)
-
-This sample demonstrates a few approaches for creating ChatGPT-like experiences over your own data using the Retrieval Augmented Generation pattern. It uses Azure OpenAI Service to access a GPT model (gpt-4.1-mini), and Azure AI Search for data indexing and retrieval.
-
-The repo includes sample data so it's ready to try end to end. In this sample application we use a fictitious company called Zava, and the experience allows its employees to ask questions about the benefits, internal policies, as well as job descriptions and roles.
-
 ## Features
 
 - Chat (multi-turn) and Q&A (single turn) interfaces
@@ -69,15 +37,6 @@ The repo includes sample data so it's ready to try end to end. In this sample ap
 ### Architecture Diagram
 
 ![RAG Architecture](docs/images/appcomponents.png)
-
-## Azure account requirements
-
-**IMPORTANT:** In order to deploy and run this example, you'll need:
-
-- **Azure account**. If you're new to Azure, [get an Azure account for free](https://azure.microsoft.com/free/cognitive-search/) and you'll get some free Azure credits to get started. See [guide to deploying with the free trial](docs/deploy_freetrial.md).
-- **Azure account permissions**:
-  - Your Azure account must have `Microsoft.Authorization/roleAssignments/write` permissions, such as [Role Based Access Control Administrator](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles#role-based-access-control-administrator-preview), [User Access Administrator](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator), or [Owner](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles#owner). If you don't have subscription-level permissions, you must be granted [RBAC](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles#role-based-access-control-administrator-preview) for an existing resource group and [deploy to that existing group](docs/deploy_existing.md#resource-group).
-  - Your Azure account also needs `Microsoft.Resources/deployments/write` permissions on the subscription level.
 
 ### Cost estimation
 
@@ -101,30 +60,6 @@ See this guide on [deploying with minimal costs](docs/deploy_lowcost.md) for mor
 
 ⚠️ To avoid unnecessary costs, remember to take down your app if it's no longer in use,
 either by deleting the resource group in the Portal or running `azd down`.
-
-## Getting Started
-
-You have a few options for setting up this project.
-The easiest way to get started is GitHub Codespaces, since it will setup all the tools for you,
-but you can also [set it up locally](#local-environment) if desired.
-
-### GitHub Codespaces
-
-You can run this repo virtually by using GitHub Codespaces, which will open a web-based VS Code in your browser:
-
-[![Open in GitHub Codespaces](https://img.shields.io/static/v1?style=for-the-badge&label=GitHub+Codespaces&message=Open&color=brightgreen&logo=github)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=599293758&machine=standardLinux32gb&devcontainer_path=.devcontainer%2Fdevcontainer.json&location=WestUs2)
-
-Once the codespace opens (this may take several minutes), open a terminal window.
-
-### VS Code Dev Containers
-
-A related option is VS Code Dev Containers, which will open the project in your local VS Code using the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers):
-
-1. Start Docker Desktop (install it if not already installed)
-2. Open the project:
-    [![Open in Dev Containers](https://img.shields.io/static/v1?style=for-the-badge&label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/azure-samples/azure-search-openai-demo)
-
-3. In the VS Code window that opens, once the project files show up (this may take several minutes), open a terminal window.
 
 ### Local environment
 
@@ -172,10 +107,13 @@ The steps below will provision Azure resources and deploy the application code t
 
     Enter a name that will be used for the resource group.
     This will create a new folder in the `.azure` folder, and set it as the active environment for any calls to `azd` going forward.
+
 1. (Optional) This is the point where you can customize the deployment by setting environment variables, in order to [use existing resources](docs/deploy_existing.md), [enable optional features (such as auth or vision)](docs/deploy_features.md), or [deploy low-cost options](docs/deploy_lowcost.md), or [deploy with the Azure free trial](docs/deploy_freetrial.md).
+
 1. Run `azd up` - This will provision Azure resources and deploy this sample to those resources, including building the search index based on the files found in the `./data` folder.
     - **Important**: Beware that the resources created by this command will incur immediate costs, primarily from the AI Search resource. These resources may accrue costs even if you interrupt the command before it is fully executed. You can run `azd down` or delete the resources manually to avoid unnecessary spending.
     - You will be prompted to select two locations, one for the majority of resources and one for the OpenAI resource, which is currently a short list. That location list is based on the [OpenAI model availability table](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models#model-summary-table-and-region-availability) and may become outdated as availability changes.
+
 1. After the application has been successfully deployed you will see a URL printed to the console.  Click that URL to interact with the application in your browser.
 It will look like the following:
 
@@ -197,29 +135,12 @@ If you've changed the infrastructure files (`infra` folder or `azure.yaml`), the
 azd up
 ```
 
-## Running the development server
+### Data ingestion
+The [`prepdocs.py`](../app/backend/prepdocs.py) script is responsible for both uploading and indexing documents. The typical usage is to call it using `scripts/prepdocs.sh` (Mac/Linux) or `scripts/prepdocs.ps1` (Windows), as these scripts will set up a Python virtual environment and pass in the required parameters based on the current `azd` environment. You can pass additional arguments directly to the script, for example `scripts/prepdocs.ps1 --removeall`. Whenever `azd up` or `azd provision` is run, the script is called automatically.
 
-You can only run a development server locally **after** having successfully run the `azd up` command. If you haven't yet, follow the [deploying](#deploying) steps above.
+![Diagram of the indexing process](docs/images/diagram_prepdocs.png)
 
-1. Run `azd auth login` if you have not logged in recently.
-2. Start the server:
-
-  Windows:
-
-  ```shell
-  ./app/start.ps1
-  ```
-
-  Linux/Mac:
-
-  ```shell
-  ./app/start.sh
-  ```
-
-  VS Code: Run the "VS Code Task: Start App" task.
-
-It's also possible to enable hotloading or the VS Code debugger.
-See more tips in [the local development guide](docs/localdev.md).
+Find more details about data ingestion in the [data ingestion guide](docs/data_ingestion.md).
 
 ## Using the app
 
@@ -270,32 +191,3 @@ You can find extensive documentation in the [docs](docs/README.md) folder:
 - [Monitoring with Application Insights](docs/monitoring.md)
 - [Productionizing](docs/productionizing.md)
 - [Alternative RAG chat samples](docs/other_samples.md)
-
-### Resources
-
-- [📖 Docs: Get started using the chat with your data sample](https://learn.microsoft.com/azure/developer/python/get-started-app-chat-template?toc=%2Fazure%2Fdeveloper%2Fai%2Ftoc.json&bc=%2Fazure%2Fdeveloper%2Fai%2Fbreadcrumb%2Ftoc.json&tabs=github-codespaces)
-- [📖 Blog: Revolutionize your Enterprise Data with ChatGPT: Next-gen Apps w/ Azure OpenAI and AI Search](https://techcommunity.microsoft.com/blog/azure-ai-services-blog/revolutionize-your-enterprise-data-with-chatgpt-next-gen-apps-w-azure-openai-and/3762087)
-- [📖 Docs: Azure AI Search](https://learn.microsoft.com/azure/search/search-what-is-azure-search)
-- [📖 Docs: Azure OpenAI Service](https://learn.microsoft.com/azure/cognitive-services/openai/overview)
-- [📖 Docs: Comparing Azure OpenAI and OpenAI](https://learn.microsoft.com/azure/cognitive-services/openai/overview#comparing-azure-openai-and-openai/)
-- [📖 Blog: Access Control in Generative AI applications with Azure AI Search](https://techcommunity.microsoft.com/blog/azure-ai-services-blog/access-control-in-generative-ai-applications-with-azure-ai-search/3956408)
-- [📺 Talk: Quickly build and deploy OpenAI apps on Azure, infused with your own data](https://www.youtube.com/watch?v=j8i-OM5kwiY)
-- [📺 Video: RAG Deep Dive Series](https://techcommunity.microsoft.com/blog/azuredevcommunityblog/rag-deep-dive-watch-all-the-recordings/4383171)
-
-### Getting help
-
-This is a sample built to demonstrate the capabilities of modern Generative AI apps and how they can be built in Azure.
-For help with deploying this sample, please post in [GitHub Issues](/issues). If you're a Microsoft employee, you can also post in [our Teams channel](https://aka.ms/azai-python-help).
-
-This repository is supported by the maintainers, _not_ by Microsoft Support,
-so please use the support mechanisms described above, and we will do our best to help you out.
-
-For general questions about developing AI solutions on Azure,
-join the Azure AI Foundry Developer Community:
-
-[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
-[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
-
-### Note
-
->Note: The PDF documents used in this demo contain information generated using a language model (Azure OpenAI Service). The information contained in these documents is only for demonstration purposes and does not reflect the opinions or beliefs of Microsoft. Microsoft makes no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability or availability with respect to the information contained in this document. All rights reserved to Microsoft.
