@@ -63,7 +63,7 @@ either by deleting the resource group in the Portal or running `azd down`.
 
 ### Local environment
 
-1. Install the required tools:
+Install the required tools:
 
     - [Azure Developer CLI](https://aka.ms/azure-dev/install)
     - [Python 3.10, 3.11, 3.12, 3.13, or 3.14](https://www.python.org/downloads/)
@@ -73,15 +73,6 @@ either by deleting the resource group in the Portal or running `azd down`.
     - [Git](https://git-scm.com/downloads)
     - [Powershell 7+ (pwsh)](https://github.com/powershell/powershell) - For Windows users only.
       - **Important**: Ensure you can run `pwsh.exe` from a PowerShell terminal. If this fails, you likely need to upgrade PowerShell.
-
-2. Create a new folder and switch to it in the terminal.
-3. Run this command to download the project code:
-
-    ```shell
-    azd init -t azure-search-openai-demo
-    ```
-
-    Note that this command will initialize a git repository, so you do not need to clone this repository.
 
 ## Deploying
 
